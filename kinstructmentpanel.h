@@ -3,12 +3,14 @@
 
 #include <QOpenGLWidget> //Qt5.4之前使用QGLWidget 之后使用QOpenGLWidget
 #include <QPaintEvent>
+#include <QPainter>
 #include <QPen>
-class KInstructmentPanel : QOpenGLWidget
+class KInstructmentPanel : public QOpenGLWidget
 {
 public:
-    KInstructmentPanel();
+    KInstructmentPanel(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = Qt::WindowFlags());
 
+    int elapsed = -0;
 private:
     void KInit();
 
@@ -17,7 +19,6 @@ private:
     QFont textFont;
     QPen circlePen;
     QPen textPen;
-    int elapsed = 0.0;
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;  //重载虚函数
 };
 

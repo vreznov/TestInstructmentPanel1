@@ -14,16 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="KInstructmentpanel" name="openGLWidget">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>271</width>
-      <height>221</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
@@ -37,6 +27,16 @@
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="KInstructmentPanel" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>200</width>
+      <height>200</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -44,7 +44,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>17</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
@@ -61,7 +61,7 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>KInstructmentpanel</class>
+   <class>KInstructmentPanel</class>
    <extends>QOpenGLWidget</extends>
    <header>kinstructmentpanel.h</header>
   </customwidget>

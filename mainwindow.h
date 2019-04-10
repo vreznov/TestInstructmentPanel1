@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "kinstructmentpanel.h"
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +17,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    QTimer tmr;
 private slots:
     void on_pushButton_clicked();
 
